@@ -37,4 +37,18 @@ def edits2(word):
 
 #Call correction(word) for corrected spell of the word
 #Example
-print correction('korrect')
+f = file("textfile.txt").read()
+oupwords = []
+for i in f.split():
+    print i
+    print correction(i)
+    oup = correction(i)
+    oupwords.append(oup)
+file = open("textfile.txt", "w")
+for item in oupwords:
+  file.write("%s " % item)
+file.close()
+'''
+i = 'naighbuur'
+print correction(i)
+'''
